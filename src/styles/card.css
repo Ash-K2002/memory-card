@@ -1,0 +1,8 @@
+.card{
+    background-color: green;
+    aspect-ratio: 3/4;
+}
+
+.clicked{
+    background-color: red;
+}
