@@ -1,8 +1,29 @@
-.card{
-    background-color: green;
-    aspect-ratio: 3/4;
+:root{
+    --back-col1: #a7f3d0;
+    --back-col2: #be123c;
 }
 
-.clicked{
-    background-color: red;
+.card{
+    background-color: var(--back-col1);
+    aspect-ratio: 3/4;
+    display: grid;
+    grid-template-rows: 2em auto;
+    border: 10px solid var(--back-col2) ;
+    border-radius: 10px;
+
+}
+
+.card-name{
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+    color: #be123c;
+    
+}
+
+.card-icon{
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
 }
