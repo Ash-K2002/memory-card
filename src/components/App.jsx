@@ -43,6 +43,7 @@ return pokeArr;
 
 function App() {
     const [arr, setArr]=useState([]);
+    const [loading, setLoading]=useState(true);
     const [gotData, setGotData]=useState(false);
     useEffect(
         ()=>{
@@ -57,14 +58,19 @@ function App() {
                     else{
                         setGotData(false);
                     }
+                    setLoading(false);
                 }
             ).catch(
-                error=>console.error('Error occured, ',error)
+                error=>{console.error('Error occured, ',error);
+                setLoading(false);}
             )
+            
         },
         []
     );
-
+if(loading){
+    return(<><h1>loading...</h1></>);
+}
     
     if(gotData)
 {
